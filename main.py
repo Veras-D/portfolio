@@ -1,9 +1,11 @@
 """
 A simple calculator
-(function) def main(page: Page) -> None
+Author: Veras-D
+Date: 24-05-09
 """
 
 import flet as ft
+from time import sleep
 
 
 def main(page: ft.Page):
@@ -28,16 +30,40 @@ def main(page: ft.Page):
     less_bnt = ft.IconButton(ft.icons.REMOVE, on_click=less, on_focus=less)
     plus_bnt = ft.IconButton(ft.icons.ADD, on_click=plus)
     text_box = ft.TextField(value="0", width=100, text_align=ft.TextAlign.CENTER)
+    test_text = ft.Text(color='white', size=40, text_align=ft.TextAlign.CENTER)
+    kabom = ft.Text(value='KABOOM!!!', size=100, opacity=0)
 
     # Adicionando os itens da pagina
     page.add(
+        # ft.Row(
+        #     [less_bnt,
+        #      text_box,
+        #      plus_bnt],
+        #     alignment=ft.MainAxisAlignment.CENTER
+        # ),
         ft.Row(
-            [less_bnt,
-             text_box,
-             plus_bnt],
+            [ft.Text(value="Esse app irá se autodestruir em: ", size=40)],
+            alignment=ft.MainAxisAlignment.CENTER
+            ),
+        ft.Row(
+            [test_text], 
+            alignment=ft.MainAxisAlignment.CENTER
+        ),
+        ft.Row(
+            [kabom],
             alignment=ft.MainAxisAlignment.CENTER
         )
     )
+
+    # Atualizando o que está na tela
+    for i in range(10, -1, -1):
+        test_text.value = i
+        page.update()
+        if i == 0:
+            kabom.opacity = 100
+            page.update()
+            # ft.
+        sleep(1)
 
 
 ft.app(target=main)
