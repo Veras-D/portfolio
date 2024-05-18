@@ -15,11 +15,9 @@ Este projeto é uma aplicação web interativa construída com Dash e Dash Boots
 
 ## Instalação
 
-1. Clone este repositório:
+1. Faça download do arquivo .py:
 
-   ```sh
-   git clone https://github.com/seu-usuario/seu-repositorio.git
-   ```
+[Arquivo](https://github.com/Veras-D/portfolio/blob/main/data_analyse_projects/cripto_dashboard_in_dash/cripto_dashboard_in_dash.py)
 
 2. Crie um ambiente virtual (opcional, mas recomendado):
 
@@ -39,7 +37,7 @@ Este projeto é uma aplicação web interativa construída com Dash e Dash Boots
 1. Execute o aplicativo:
 
    ```sh
-   python cripto_dashboard_in_dash.pyy
+   python cripto_dashboard_in_dash.py
    ```
 
 2. Abra o navegador e vá para `http://127.0.0.1:8080/` para visualizar a aplicação.
