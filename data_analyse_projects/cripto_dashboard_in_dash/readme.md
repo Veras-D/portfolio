@@ -1,7 +1,3 @@
-Aqui está um exemplo de README para o seu projeto de comparação de valorização de criptomoedas usando Dash e Bootstrap:
-
----
-
 # Comparação de Valorização de Criptomoedas
 
 Este projeto é uma aplicação web interativa construída com Dash e Dash Bootstrap Components para comparar a valorização de diferentes criptomoedas ao longo do tempo. Os dados históricos são obtidos do Yahoo Finance usando a biblioteca `yfinance`.
@@ -25,20 +21,14 @@ Este projeto é uma aplicação web interativa construída com Dash e Dash Boots
    git clone https://github.com/seu-usuario/seu-repositorio.git
    ```
 
-2. Navegue até o diretório do projeto:
-
-   ```sh
-   cd seu-repositorio
-   ```
-
-3. Crie um ambiente virtual (opcional, mas recomendado):
+2. Crie um ambiente virtual (opcional, mas recomendado):
 
    ```sh
    python -m venv venv
    source venv/bin/activate  # No Windows, use `venv\Scripts\activate`
    ```
 
-4. Instale as dependências:
+3. Instale as dependências:
 
    ```sh
    pip install dash dash-bootstrap-components yfinance
@@ -49,7 +39,7 @@ Este projeto é uma aplicação web interativa construída com Dash e Dash Boots
 1. Execute o aplicativo:
 
    ```sh
-   python app.py
+   python cripto_dashboard_in_dash.pyy
    ```
 
 2. Abra o navegador e vá para `http://127.0.0.1:8080/` para visualizar a aplicação.
