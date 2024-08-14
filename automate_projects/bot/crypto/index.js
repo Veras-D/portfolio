@@ -21,7 +21,7 @@ async function start() {
     try {
         // Comandos do bot
         const { data } = await axios.get(URL_API + "/api/v3/klines?limit=21&interval=15m&symbol=" + SYMBOL);
-        const cotacaoAtual = data[data.length - 1];  // // [time, open, high, low, close, volume, ...]
+        const cotacaoAtual = data[data.length - 1];  // [time, open, high, low, close, volume, ...]
         const priceClose = parseFloat(cotacaoAtual[4]);
 
         console.clear();
@@ -42,7 +42,7 @@ async function start() {
             console.log(`Vendido a: ${priceClose}`);
             const lucro = (priceClose - valorCompra) / valorCompra * 100;
             console.log(`O lucro foi de: ${lucro}%`);
-            isBuy = false
+            isBuy = false;
             historicoDeLucros.push(lucro);
         }
         else{
@@ -55,5 +55,5 @@ async function start() {
     }
 }
 
-setInterval(start, 3000);
+setInterval(start, 15 * 60000);
 start();
